@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 import { Card, Paragraph, Title } from 'react-native-paper'
 import { RiVirusLine } from "react-icons/ri";
+import { AiOutlineFileDone,AiOutlineException } from "react-icons/ai";
 
 export default function WarningCard() {
     return (
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     card: {
         height: 320,
         width: "100%",
-        backgroundColor: "#95DAC1",
+        backgroundColor: "#BFA2DB",
         padding: 0,
         margin: 0,
         borderBottomLeftRadius: 30,

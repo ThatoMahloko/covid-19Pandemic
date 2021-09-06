@@ -8,9 +8,11 @@ import WarningCard from '../components/WarningCard';
 
 export default function TabTwoScreen() {
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-    <WarningCard />
+
+    <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: '#F0D9FF'}} >
+      <WarningCard />
     </ScrollView>
+
   );
 }
 
@@ -18,7 +20,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor:"#fff"
     // justifyContent: 'center',
   }
   ,
@@ -57,3 +58,7 @@ const styles = StyleSheet.create({
   }
 });
 
+// primary #95DAC1
+// secondary #00A19D
+// teritiary #6F69AC
+// 57CC99

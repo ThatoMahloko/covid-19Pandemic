@@ -15,7 +15,7 @@ export default function CardComp(props) {
                 <FcHighPriority style={{height:'160px', width: '160px', marginTop:'20'}}/>
             </View>            
         </Card>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
