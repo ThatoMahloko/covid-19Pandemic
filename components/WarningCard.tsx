@@ -17,7 +17,7 @@ export default function WarningCard() {
 }
 const styles = StyleSheet.create({
     card: {
-        height: 450,
+        height: 320,
         width: "100%",
         backgroundColor: "#95DAC1",
         padding: 0,
