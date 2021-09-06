@@ -1,16 +1,28 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView } from 'react-native';
-import { Card } from 'react-native-paper';
+import { Card, Title } from 'react-native-paper';
+import { AiOutlineFileProtect, AiOutlineFileExcel } from "react-icons/ai";
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import WarningCard from '../components/WarningCard';
-
+import DoAndDont from '../components/DoAndDont';
+import DoStuff from '../components/DoStuff';
 export default function TabTwoScreen() {
   return (
 
-    <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: '#F0D9FF'}} >
+    <ScrollView showsVerticalScrollIndicator={false} style={{ backgroundColor: '#F0D9FF' }} >
       <WarningCard />
+      <View style={styles.head__content}>
+        <Title >{"Covid-19 Do's"}</Title>
+        <AiOutlineFileProtect style={{ margin: 20, height: '60px', width: '60px' }} />
+      </View>
+        <DoAndDont />
+        <View style={styles.head__content}>
+        <Title >{"Covid-19 Dont's"}</Title>
+        <AiOutlineFileExcel style={{ margin: 20, height: '60px', width: '60px' }} />
+      </View>
+      <DoStuff />
     </ScrollView>
 
   );
@@ -55,6 +67,13 @@ const styles = StyleSheet.create({
   ,
   top__card: {
     height: 0
+  }
+  ,
+  head__content: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F0D9FF'
   }
 });
 

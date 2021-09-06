@@ -1,13 +1,12 @@
-import React from 'react'
-import { Card, Title, Subheading } from 'react-native-paper';
-import { ScrollView, StyleSheet, } from 'react-native';
-import { AiOutlineFileProtect } from "react-icons/ai";
-import { View } from './Themed';
+import React from 'react';
 import { GiGasMask } from "react-icons/gi";
+import { View, Text, StyleSheet, ScrollView, } from 'react-native';
+import { Card, Title, Subheading } from 'react-native-paper';
 
-export default function DoAndDont() {
+export default function DoStuff() {
     return (
-        <ScrollView horizontal={true}>
+        <ScrollView>
+            <ScrollView horizontal={true}>
             <View style={styles.view_Container}>
                 <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
                 <Subheading>
@@ -58,6 +57,7 @@ export default function DoAndDont() {
             </View>
 
         </ScrollView>
+        </ScrollView>
     )
 }
 const styles = StyleSheet.create({
@@ -85,3 +85,4 @@ const styles = StyleSheet.create({
         marginRight: 5,
      }
 })
+
