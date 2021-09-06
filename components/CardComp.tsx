@@ -20,13 +20,15 @@ export default function CardComp(props) {
 
 const styles = StyleSheet.create({
     card: {
-        height: "60%",
+        height: "20%",
         width: "100%",
         backgroundColor: "#00A19D",
         padding: 0,
         margin: 0,
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
+        marginBottom: 40,
+        paddingBottom: 0
     }
     ,
     card_content: {
