@@ -1,62 +1,69 @@
-import React from 'react'
+import React from 'react';
+import { GiGasMask, GiFamilyHouse, GiPathDistance, GiSoap, GiMedicalPack } from "react-icons/gi";
+import { FaPrescriptionBottleAlt } from "react-icons/fa";
+import { View, Text, StyleSheet, ScrollView, } from 'react-native';
 import { Card, Title, Subheading } from 'react-native-paper';
-import { ScrollView, StyleSheet, } from 'react-native';
-import { AiOutlineFileProtect } from "react-icons/ai";
-import { View } from './Themed';
-import { GiGasMask } from "react-icons/gi";
 
 export default function DoAndDont() {
     return (
-        <ScrollView horizontal={true}>
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+        <ScrollView>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Wear a mask!!"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiFamilyHouse style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Lockdown!!"}
+                    </Subheading>
+                    
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiPathDistance style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Social Distance"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiSoap style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Soap Wash!!"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiMedicalPack style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Monitor Health"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <FaPrescriptionBottleAlt style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Take Vitamins"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
-
+            </ScrollView>
         </ScrollView>
     )
 }
@@ -71,17 +78,29 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     }
     ,
-    do_dont_content:{
+    do_dont_content: {
         justifyContent: 'center',
         textAlign: 'center'
     }
     ,
-    view_Container:{
+    view_Container: {
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F0D9FF', 
-        marginLeft: 5,
-        marginRight: 5,
-     }
+        backgroundColor: '#fff',
+        marginLeft: 10,
+        marginRight: 10,
+        width: 120,
+        height: 120,
+        borderRadius: 60
+    }
+    ,
+    sub__Title: {
+        marginTop: 20,
+        margin: 'auto',
+        justifyContent: 'center',
+
+    }
 })
+
+

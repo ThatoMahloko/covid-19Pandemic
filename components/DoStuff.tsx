@@ -1,62 +1,49 @@
 import React from 'react';
-import { GiGasMask } from "react-icons/gi";
+import { GiGasMask, GiPartyPopper, GiWineBottle, GiAlarmClock, GiCycle } from "react-icons/gi";
 import { View, Text, StyleSheet, ScrollView, } from 'react-native';
 import { Card, Title, Subheading } from 'react-native-paper';
 
 export default function DoStuff() {
     return (
         <ScrollView>
-            <ScrollView horizontal={true}>
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiPartyPopper style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Social Parties"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiWineBottle style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Sale of Alcohol"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiAlarmClock style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Disobey Curfew"}
+                    </Subheading>
+                </View>
 
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
-
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
-
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
-
-            <View style={styles.view_Container}>
-                <GiGasMask style={{ margin: 20, height: '60px', width: '60px' }} />
-                <Subheading>
-                    {"Wear a mask!!"}
-                </Subheading>
-            </View>
-
-        </ScrollView>
+                <View>
+                    <View style={styles.view_Container}>
+                        <GiCycle style={{ margin: 20, height: '60px', width: '60px' }} />
+                    </View>
+                    <Subheading style={styles.sub__Title}>
+                        {"Dispose Masks"}
+                    </Subheading>
+                </View>
+               
+            </ScrollView>
         </ScrollView>
     )
 }
@@ -71,18 +58,27 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     }
     ,
-    do_dont_content:{
+    do_dont_content: {
         justifyContent: 'center',
         textAlign: 'center'
     }
     ,
-    view_Container:{
+    view_Container: {
         textAlign: 'center',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#F0D9FF', 
-        marginLeft: 5,
-        marginRight: 5,
-     }
+        backgroundColor: '#fff',
+        marginLeft: 10,
+        marginRight: 10,
+        width: 120,
+        height: 120,
+        borderRadius: 60
+    }
+    ,
+    sub__Title:{
+        marginTop: 20,
+        margin:'auto', 
+        justifyContent: 'center'
+    }
 })
 
