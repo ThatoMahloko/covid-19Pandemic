@@ -18,6 +18,7 @@ export default function TabTwoScreen() {
         <AiOutlineFileProtect style={{ margin: 20, height: '60px', width: '60px' }} />
       </View>
         <DoAndDont />
+        <hr/>
         <View style={styles.head__content}>
         <Title >{"Covid-19 Dont's"}</Title>
         <AiOutlineFileExcel style={{ margin: 20, height: '60px', width: '60px' }} />
@@ -73,7 +74,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F0D9FF'
+    backgroundColor: '#F0D9FF',
+    marginBottom: 10,
   }
 });
 

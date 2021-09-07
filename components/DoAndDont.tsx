@@ -6,7 +6,7 @@ import { Card, Title, Subheading } from 'react-native-paper';
 
 export default function DoAndDont() {
     return (
-        <ScrollView>
+        <ScrollView style={{marginBottom:40}}>
             <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 <View>
                     <View style={styles.view_Container}>
