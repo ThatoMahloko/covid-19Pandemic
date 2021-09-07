@@ -16,17 +16,17 @@ export default function TabOneScreen({ navigation }, props: RootTabScreenProps<'
 
       <View style={styles.container}>
         {/* <View >  */}
-          <CardComp style={styles.top__card}
-            title_card="COVID-19"
-            subhead_card="What is it?"
-            paragraph_card="If you are feeling sick, ensure that you get a COVID-19 test for your protection and those around you."
-          />
+        <CardComp style={styles.top__card}
+          title_card="COVID-19"
+          subhead_card="What is it?"
+          paragraph_card="If you are feeling sick, ensure that you get a COVID-19 test for your protection and those around you."
+        />
         {/* </View> */}
         <BiDna style={{ height: '60px', width: '60px', marginBottom: '40', color: "#95DAC1" }} />
         <Title style={styles.title}>{"PREVENTION"}</Title>
         <ScrollView showsVerticalScrollIndicator={false}>
           <ScrollContent />
-   
+
         </ScrollView>
       </View>
     </ScrollView>
