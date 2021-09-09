@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import { Avatar, Button, Card, Title, Paragraph, Subheading } from 'react-native-paper';
 import { FaDatabase } from "react-icons/fa";
 import { GoGraph } from "react-icons/go";
@@ -7,13 +7,15 @@ import { GoGraph } from "react-icons/go";
 // GoGraph
 export default function StatsCard() {
     return (
-        <Card style={styles.card}>
-            <View style={styles.card_content}>
-                <Title style={{ margin: 'auto' }}>{"COVID-19"}</Title>
-                <GoGraph style={{ height: '100px', width: '100px', marginTop: '20', marginBottom:"40" }} />
-                <Subheading style={styles.sub_head}>{"Overall Stats and More"}</Subheading>
-            </View>
-        </Card>
+        <ScrollView>
+            <Card style={styles.card}>
+                <View style={styles.card_content}>
+                    <Title style={{ margin: 'auto' }}>{"COVID-19"}</Title>
+                    <GoGraph style={{ height: '100px', width: '100px', marginTop: '20', marginBottom: "40" }} />
+                    <Subheading style={styles.sub_head}>{"Overall Stats and More"}</Subheading>
+                </View>
+            </Card>
+        </ScrollView>
     )
 }
 
@@ -37,7 +39,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Verdana',
     }
     ,
-    sub_head:{
+    sub_head: {
         fontWeight: '800',
 
     }
