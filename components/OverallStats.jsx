@@ -1,44 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, ScrollView } from 'react-native';
 import { Card, Title, Subheading, Button } from 'react-native-paper';
 
 export default function OverallStats() {
-    const [getInfo, setInfo] = useState({});
-    const [getStats, setStats] = useState('');
-    const [errorMessage, errMessage] = useState(['']);
+    // const [getInfo, setInfo] = useState({});
+    // const [getStats, setStats] = useState('');
+    // const [errorMessage, errMessage] = useState(['']);
 
-    console.log(Element)
-    async function covidState() {
-        const data = fetch(`https://coronavirus-19-api.herokuapp.com/countries/South%20Africa`)
-            .then(response => response.json())
-            .then(data => setInfo(data));
+    // console.log(Element)
+    // async function covidState() {
+    //     const data = fetch(`https://coronavirus-19-api.herokuapp.com/countries/South%20Africa`)
+    //         .then(response => response.json())
+    //         .then(data => setInfo(data));
 
-        for (const key in getInfo) {
-            console.log(object[key]);
-        }
-        // console.log(getInfo)
-        
-    }
+    //     for (const key in getInfo) {
+    //         console.log(object[key]);
+    //     }
+    //     // console.log(getInfo)
+
+// }
 
 
 
-    return (
-        <ScrollView>
-            <Card style={styles.card}>
-                <View style={styles.card_content}>
-                    <Title style={{ margin: 'auto' }}>{"COVID-19"}</Title>
-                    <Subheading style={styles.sub_head}>{"Worldwide Stats"}</Subheading>
-                </View>
-                <Button mode="contained" onPress={() => covidState()}>
-                    CLICK ME!!
-                </Button>
-                <View>
-
-                    {getStats}
-                </View>
-            </Card>
-        </ScrollView>
-    )
+return (
+    <ScrollView>
+        <Card style={styles.card}>
+            <View style={styles.card_content}>
+                <Title style={{ margin: 'auto' }}>{"COVID-19"}</Title>
+                <Subheading style={styles.sub_head}>{"Worldwide Stats"}</Subheading>
+            </View>
+           
+            <View>
+            {/* <Cards 
+            number = {data ? data.Global.TotalConfirmed : 0}
+            /> */}
+            </View>
+        </Card>
+    </ScrollView>
+)
 }
 const styles = StyleSheet.create({
     card: {
