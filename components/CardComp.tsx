@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph, Subheading } from 'react-native-paper';
 import { FcHighPriority } from "react-icons/fc";
 import { IoIosCall } from "react-icons/io";
@@ -12,13 +12,13 @@ export default function CardComp(props) {
                 <Subheading style={styles.sub_head}>{props.subhead_card}</Subheading>
                 <Paragraph style={styles.p__text}>{props.paragraph_card}</Paragraph>
             </View>
-            <View style={styles.card_content}>
+            {/* <View style={styles.card_content}>
                 <FcHighPriority style={{ height: '160px', width: '160px', marginTop: '20' }} />
-            </View>
+            </View> */}
 
-            <View style={styles.button_container}>
-                <View style={styles.container_contenet}><Button mode="contained" style={styles.buttons_call}><IoIosCall style={{width: '30', height: '30'}}/><Text style={styles.text_in_btn}>Call Now</Text></Button></View>
-                <View style={styles.container_contenet}><Button mode="contained" style={styles.buttons_sms}><FaComment style={{width: '30', height: '30'}}/><Text style={styles.text_in_btn}>Send Sms</Text></Button></View>
+            <View style={{ justifyContent: 'center', flexDirection: 'row' }}>
+                <TouchableOpacity style={styles.button_opacity_call}><Text style={styles.button_text}>Call Now</Text></TouchableOpacity>
+                <TouchableOpacity style={styles.button_opacity_msg}><Text style={styles.button_text}>Send SMS</Text></TouchableOpacity>
             </View>
         </Card>
     );
@@ -26,14 +26,14 @@ export default function CardComp(props) {
 
 const styles = StyleSheet.create({
     card: {
-        height: "20%",
+        height: 200,
         width: "100%",
         backgroundColor: "#00A19D",
         padding: 0,
         margin: 0,
         borderBottomLeftRadius: 30,
         borderBottomRightRadius: 30,
-        marginBottom: 40,
+        marginBottom: 100,
         paddingBottom: 0
     }
     ,
@@ -54,45 +54,34 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     }
     ,
-    button_container: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        margin: 'auto',
-        padding: 'auto'
-    },
-    buttons_call: {
-        backgroundColor: "#B61919",
-        margin: 5,
-        borderRaduis: 60,
-        height: 50,
-        justifyContent: 'center',
-        width: 200,
-        borderRadius: 90,
-        marginTop: 20
+    button_opacity_call:{
+        backgroundColor: "#FF0000", 
+        margin: 5, 
+        width: 140, 
+        height: 35, 
+        borderRadius: 80,
+        flexDirection: 'row', 
+        textAlign: 'center', 
+        justifyContent: 'center', 
+        paddingTop: 2
     }
     ,
-    buttons_sms: {
+    button_opacity_msg:{
         backgroundColor: "#290FBA",
-        margin: 5,
-        borderRaduis: 60,
-        height: 50,
-        justifyContent: 'center',
-        width: 200,
-        borderRadius: 90,
-        marginTop: 20
-    }
-    ,   
-    text_in_btn: {
-        // marginLeft: 10,
-        // marginBottom: 50,
-        margin: 'auto'
+        margin: 5, 
+        width: 140, 
+        height: 35, 
+        borderRadius: 80,
+        flexDirection: 'row', 
+        textAlign: 'center', 
+        justifyContent: 'center', 
+        paddingTop: 2
     }
     ,
-    container_contenet: {
-        justifContent: 'center'
+    button_text:{
+        color: "#fff", 
+        fontSize: 20
     }
-    
 })
 
 // primary #95DAC1
