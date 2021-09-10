@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { StyleSheet, ScrollView, SafeAreaView } from 'react-native';
-
+import { BiUserMinus, BiUser, BiMoveHorizontal } from "react-icons/bi";
+import { FaBriefcaseMedical } from "react-icons/fa";
+import { GiBroom } from "react-icons/gi";
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import CardComp from '../components/CardComp';
@@ -11,24 +13,20 @@ import ScrollContent from '../components/ScrollContent';
 export default function TabOneScreen({ navigation }, props: RootTabScreenProps<'TabOne'>) {
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-
-
+    <ScrollView showsVerticalScrollIndicator={false} style={{backgroundColor: "#fff"}}>
       <View style={styles.container}>
-        {/* <View >  */}
-        <CardComp style={styles.top__card}
+        <CardComp 
           title_card="COVID-19"
           subhead_card="What is it?"
           paragraph_card="If you are feeling sick, ensure that you get a COVID-19 test for your protection and those around you."
         />
-        {/* </View> */}
-        <BiDna style={{ height: '60px', width: '60px', marginBottom: '40', color: "#95DAC1" }} />
-        <Title style={styles.title}>{"PREVENTION"}</Title>
-        <ScrollView showsVerticalScrollIndicator={false}>
-          <ScrollContent />
-
-        </ScrollView>
       </View>
+        <ScrollView showsVerticalScrollIndicator={false} horizontal={true} style={{marginBottom:0}}>
+          <ScrollContent />
+        </ScrollView>
+      <Card style={styles.do_test}>
+
+      </Card>
     </ScrollView>
 
   );
@@ -39,6 +37,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     // justifyContent: 'center',
+    backgroundColor:"#fff"
   }
   ,
   title: {
@@ -71,7 +70,18 @@ const styles = StyleSheet.create({
     marginTop: "2"
   }
   ,
-  top__card: {
-    height: 0
+  scrollcont_view:{
+    justifyContent:'center'
+  }
+,
+  do_test:{
+    backgroundColor: "#22577A",
+    width: "100%", 
+    height: 170, 
+    borderTopLeftRadius: 30, 
+    borderTopRightRadius: 30, 
+    borderBottomLeftRadius:30, 
+    borderBottomRightRadius:30, 
+    marginBottom: 10,
   }
 });
