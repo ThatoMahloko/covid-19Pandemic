@@ -9,7 +9,10 @@ import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
 import { ColorSchemeName, Pressable } from 'react-native';
+import { RiVirusLine } from "react-icons/ri";
+import { ImStatsBars } from "react-icons/im";
 
+import { FaBriefcaseMedical,FaHome } from "react-icons/fa";
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
@@ -59,11 +62,11 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne" screenOptions={{ tabBarActiveTintColor: Colors[colorScheme].tint, }}>
-                  <BottomTab.Screen name="TabOne" component={TabOneScreen} options={({ navigation }: RootTabScreenProps<'TabOne'>) =>
+      initialRouteName="Home" screenOptions={{ tabBarActiveTintColor: Colors[colorScheme].tint, }}>
+                  <BottomTab.Screen name="Home" component={TabOneScreen} options={({ navigation }: RootTabScreenProps<'Home'>) =>
                       ({
-                            title: 'Tab One', tabBarIcon: ({ color }) =>
-                              <TabBarIcon name="code" color={color} />,
+                             tabBarIcon: ({ color }) =>
+                              <FaHome name="code" color={color} style={{height:40, width:40}}/>,
                             headerRight: () =>
                             (
                                   <Pressable onPress={() => navigation.navigate('Modal')} style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1, })}>
@@ -72,8 +75,8 @@ function BottomTabNavigator() {
                             ),
                       })}
                   />
-          <BottomTab.Screen name="TabTwo" component={TabTwoScreen} options={{ title: 'Tab Two', tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />, }} />
-          <BottomTab.Screen name="TabThree" component={TabThreeScreen} options={{ title: 'Tab Three', tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />, }} />
+          <BottomTab.Screen name="TabTwo" component={TabTwoScreen} options={{ title: 'Rules', tabBarIcon: ({ color }) => <RiVirusLine name="code" color={color} style={{height:40, width:40}}/>, }} />
+          <BottomTab.Screen name="TabThree" component={TabThreeScreen} options={{ title: 'Stats', tabBarIcon: ({ color }) => <ImStatsBars name="code" color={color} style={{height:40, width:40}}/>, }} />
     </BottomTab.Navigator>
   );
 }
