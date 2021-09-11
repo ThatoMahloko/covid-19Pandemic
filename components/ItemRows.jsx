@@ -1,30 +1,33 @@
 import React from "react";
 import { Text, View, StyleSheet, Image } from 'react-native';
+import { Card } from "react-native-paper";
 import { FlatList } from "react-native-gesture-handler";
 
 const ItemRows = ({ item }) => {
     return (
 
-        <View style={styles.rows}>
-            <View style={{
+        // <View style={styles.rows}>
+        <>
+            <Card style={{
                 flexDirection: 'row',
-                justifyContent: 'space-around'
+                backgroundColor: "#FF6B6B",
+                marginBottom: 10,
+                marginTop: 10,
+                textAlign: 'center',
+                borderRadius: 20
             }}>
-                <View>
-                    <Image
-                        source={{ uri: `https://www.countryflags.io/${item.CountryCode}/flat/64.png` }}
-                        style={styles.flag}
-                    />
 
-                </View>
-                <View style={{ marginRight: 100, marginTop: 5 }}>
-                    <Text style={styles.countryName}>{item.Country}</Text>
-                </View>
-                <View>
-                    <Text style={styles.totalCases}>{item.TotalConfirmed}</Text>
-                </View>
-            </View>
-        </View>
+                <Image
+                    source={{ uri: `https://www.countryflags.io/${item.CountryCode}/flat/64.png` }}
+                    style={styles.flag}
+                />
+
+
+                <Text style={styles.countryName}>{item.Country}</Text>
+                <Text style={styles.totalCases}>{item.TotalConfirmed}</Text>
+            </Card>
+        </>
+        /* </View> */
     )
 }
 
@@ -35,7 +38,8 @@ const styles = StyleSheet.create({
         width: '100%',
         marginTop: 10,
         marginBottom: 8,
-        padding: 10
+        padding: 10,
+        backgroundColor: "#7FC8A9",
     }
     ,
     countryName: {
@@ -47,13 +51,14 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         marginTop: 5,
-        color: "red"
+        color: "white"
     },
     flag: {
         height: 30,
         width: 40,
         padding: 10,
-        borderRadius: 1000
+        borderRadius: 1000,
+        margin: 'auto'
     }
 })
 

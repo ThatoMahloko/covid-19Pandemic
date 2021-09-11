@@ -66,13 +66,7 @@ function BottomTabNavigator() {
                   <BottomTab.Screen name="Home" component={TabOneScreen} options={({ navigation }: RootTabScreenProps<'Home'>) =>
                       ({
                              tabBarIcon: ({ color }) =>
-                              <FaHome name="code" color={color} style={{height:40, width:40}}/>,
-                            headerRight: () =>
-                            (
-                                  <Pressable onPress={() => navigation.navigate('Modal')} style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1, })}>
-                                    <FontAwesome name="info-circle" size={25} color={Colors[colorScheme].text} style={{ marginRight: 15 }} />
-                                  </Pressable>
-                            ),
+                              <FaHome name="code" color={color} style={{height:40, width:40}}/>
                       })}
                   />
           <BottomTab.Screen name="TabTwo" component={TabTwoScreen} options={{ title: 'Rules', tabBarIcon: ({ color }) => <RiVirusLine name="code" color={color} style={{height:40, width:40}}/>, }} />
@@ -90,3 +84,14 @@ function TabBarIcon(props: {
 }) {
   return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
 }
+
+
+
+//Modal icon
+// ,
+//                             headerRight: () =>
+//                             (
+//                                   <Pressable onPress={() => navigation.navigate('Modal')} style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1, })}>
+//                                     <FontAwesome name="info-circle" size={25} color={Colors[colorScheme].text} style={{ marginRight: 15 }} />
+//                                   </Pressable>
+//                             ),

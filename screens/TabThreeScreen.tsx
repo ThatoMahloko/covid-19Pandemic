@@ -66,10 +66,10 @@ export default function TabThreeScreen() {
                 <Title style={{ margin: 'auto' }}>{data ? data.Global.TotalRecovered : 0}</Title>
             </Card>
             <View>
-                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', backgroundColor: "#FDD2BF"}}>
                     <Text style={styles.cases_heading}>Covid Cases by region</Text>
                 </View>
-                <View>
+                <View style={{backgroundColor: "#FDD2BF"}}>
                     <FlatList 
                     data={data && data.Countries ? data.Countries : 0} 
                     renderItem={({item})=> <ItemRows item={item}/>}/>
